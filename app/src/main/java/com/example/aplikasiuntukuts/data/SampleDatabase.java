@@ -56,17 +56,7 @@ public abstract class SampleDatabase extends RoomDatabase {
     }
 
     private void populateInitialData() {
-        if (cheese().count() == 0) {
-            runInTransaction(new Runnable() {
-                @Override
-                public void run() {
-                    Cheese cheese = new Cheese();
-                    for (int i = 0; i < Cheese.CHEESES.length; i++) {
-                        cheese.name = Cheese.CHEESES[i];
-                        cheese().insert(cheese);
-                    }
-                }
-            });
+       
         }
     }
 
